@@ -1,7 +1,6 @@
-/* Copyright (c) 2015-2016 MIT 6.005 course staff, all rights reserved.
- * Redistribution of original or derived work requires permission of course staff.
- */
 package expressivo;
+
+import java.util.Objects;
 
 /**
  * An immutable data type representing a polynomial expression of:
@@ -53,5 +52,18 @@ public interface Expression {
     public int hashCode();
     
     // TODO more instance methods
-    
+
+    /**
+     * Add two expressions.
+     * @param other the expression to add
+     * @return the sum of this and other
+     */
+    public Expression add(Expression other);
+
+    /**
+     * Multiply two expressions.
+     * @param other the expression to multiply
+     * @return the product of this and other
+     */
+    public Expression multiply(Expression other);
 }
