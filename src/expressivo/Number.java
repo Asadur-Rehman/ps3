@@ -1,7 +1,8 @@
 package expressivo;
 
-// A class representing a number in exp.
-
+/**
+ * A class representing a number in an expression.
+ */
 public class Number implements Expression {
     private final double value;
 
@@ -16,10 +17,8 @@ public class Number implements Expression {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null || getClass() != obj.getClass())
-            return false;
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
         Number number = (Number) obj;
         return Double.compare(number.value, value) == 0;
     }
